@@ -6,7 +6,7 @@ import { Toaster } from 'sonner';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Toaster theme="dark" richColors />
+    <Toaster theme="dark" />
     <App />
   </StrictMode>
 );

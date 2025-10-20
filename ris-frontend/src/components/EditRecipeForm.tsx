@@ -1,7 +1,6 @@
 import { XCircleIcon } from '@heroicons/react/16/solid';
 import axios from 'axios';
 import { useState } from 'react';
-import { toast } from 'sonner';
 
 type FormDataType = {
   id: number;
@@ -21,6 +20,7 @@ type RecipeType = {
 
 type EditRecipeFormType = {
   setRecipes: React.Dispatch<React.SetStateAction<RecipeType[]>>;
+  setEditRecipeForm: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const EditRecipeForm: React.FC<FormDataType & EditRecipeFormType> = ({
@@ -30,6 +30,7 @@ const EditRecipeForm: React.FC<FormDataType & EditRecipeFormType> = ({
   category,
   date_of_creation,
   setRecipes,
+  setEditRecipeForm,
 }) => {
   const [formData, setFormData] = useState<FormDataType>({
     id: id,
@@ -46,11 +47,23 @@ const EditRecipeForm: React.FC<FormDataType & EditRecipeFormType> = ({
         console.log(formData);
 
         axios
-          .post(`http://localhost:8080/api/recipe/edit/${id}`, formData)
+          .post(`http://localhost:8080/recipe/edit`, {
+            id: formData.id,
+            name: formData.name,
+            description: formData.description,
+            category: formData.category,
+          })
           .then(() => {
             setRecipes((prevRecipes) =>
               prevRecipes.map((recipe) =>
-                recipe.id === formData.id ? { ...formData } : recipe
+                recipe.id === formData.id
+                  ? {
+                      ...recipe,
+                      name: formData.name,
+                      description: formData.description,
+                      category: formData.category,
+                    }
+                  : recipe
               )
             );
           })
@@ -58,22 +71,25 @@ const EditRecipeForm: React.FC<FormDataType & EditRecipeFormType> = ({
             console.error(err);
           });
       }}
-      className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-[#222222] rounded-lg py-10 p-14 z-10 add-recipe-form space-y-6 flex flex-col"
+      className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-blk-5 border border-border rounded-lg py-10 p-14 z-10 add-recipe-form space-y-6 flex flex-col"
     >
-      <div onClick={() => {}}>
-        <XCircleIcon className="h-7 absolute top-1/12 right-1/12 hover:text-[#F5CB5C] cursor-pointer self-end" />
+      <div onClick={() => setEditRecipeForm((prev) => !prev)}>
+        <XCircleIcon className="h-7 absolute top-1/20 right-1/12 hover:text-[#F5CB5C] cursor-pointer self-end" />
       </div>
 
-      <h1 className="text-xl text-center">Add new recipe</h1>
+      <h1 className="text-xl text-center">Editing {name}</h1>
 
       <div>
         <label className="block mb-2 font-medium">Recipe Category</label>
         <select
           value={formData.category}
           onChange={(e) =>
-            setFormData((prev) => ({ ...prev, category: e.target.value }))
+            setFormData((prev) => ({
+              ...prev,
+              category: e.target.value,
+            }))
           }
-          className="w-full bg-[#2e2e2e] px-3 py-2 rounded"
+          className="w-full bg-blk-10 border border-border px-3 py-2 rounded"
         >
           <option value="Breakfast">Breakfast</option>
           <option value="Lunch">Lunch</option>
@@ -91,7 +107,7 @@ const EditRecipeForm: React.FC<FormDataType & EditRecipeFormType> = ({
           }
           type="text"
           placeholder="Enter recipe name"
-          className="w-full px-3 py-2 rounded bg-[#2e2e2e] transition-all duration-200 ease-in-out focus:outline-none focus:ring-1 focus:ring-[#808080]"
+          className="w-full px-3 py-2 rounded bg-blk-10 border border-border transition-all duration-200 ease-in-out focus:outline-none focus:ring-1 focus:ring-[#808080]"
         />
       </div>
 
@@ -106,7 +122,7 @@ const EditRecipeForm: React.FC<FormDataType & EditRecipeFormType> = ({
           }
           id="description"
           placeholder="Enter recipe description..."
-          className="w-full px-3 py-2 rounded bg-[#2e2e2e] transition-all duration-200 ease-in-out focus:outline-none focus:ring-1 focus:ring-[#808080]"
+          className="w-full px-3 py-2 rounded bg-blk-10 border border-border transition-all duration-200 ease-in-out focus:outline-none focus:ring-1 focus:ring-[#808080]"
         />
       </div>
 

@@ -31,12 +31,14 @@ const Header: React.FC<HeaderType> = ({ setRecipes }) => {
   }, [formVisible]);
 
   return (
-    <div className="bg-[#222222]">
+    <div className="bg-blk-5">
       <div className="flex justify-between p-4 container mx-auto items-center">
-        <p className="text-2xl font-bold hover:text-[#F5CB5C]">RecipeVwr</p>
+        <p className="text-2xl font-bold text-text-base hover:text-[#F5CB5C]">
+          RecipeVwr
+        </p>
         <div>
           <p
-            className="hover:text-[#F5CB5C] cursor-pointer"
+            className="hover:text-[#F5CB5C] text-text-base text-xl cursor-pointer"
             onClick={() => setFormVisible(!formVisible)}
           >
             New Recipe

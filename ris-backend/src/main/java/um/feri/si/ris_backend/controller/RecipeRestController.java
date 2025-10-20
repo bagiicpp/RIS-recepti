@@ -1,6 +1,6 @@
 package um.feri.si.ris_backend.controller;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import um.feri.si.ris_backend.model.Recipe;
@@ -9,35 +9,43 @@ import um.feri.si.ris_backend.service.RecipeService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/recipe")
-@CrossOrigin(origins = "*")
+@RequestMapping("/recipe")
+@CrossOrigin(origins = "http://localhost:5173")
 public class RecipeRestController {
+
     private final RecipeService recipeService;
 
+    @Autowired
     public RecipeRestController(RecipeService recipeService) {
         this.recipeService = recipeService;
     }
 
-    @PostMapping("/new")
-    public ResponseEntity<Recipe> addRecipe(@RequestBody Recipe recipe) {
-        Recipe saved = recipeService.addRecipe(recipe);
-        return ResponseEntity.ok(saved);
+    @GetMapping("/all")
+    public List<Recipe> findAll() {
+        List<Recipe> recipes = recipeService.getAllRecipes();
+        recipes.forEach(System.out::println);
+        return recipes;
     }
 
-    @GetMapping("/all")
-    public List<Recipe> getAllRecipes() {
-        return recipeService.getAllRecipes();
+    @GetMapping("/{id}")
+    public Recipe findById(@PathVariable Long id) {
+        return recipeService.getRecipeById(id);
+    }
+
+    @PostMapping("/new")
+    public Recipe addNew(@RequestBody Recipe recipe) {
+        return recipeService.createRecipe(recipe);
+    }
+
+    @PostMapping("/edit")
+    public Recipe updateRecipe(@RequestBody Recipe recipe) {
+        return recipeService.updateRecipe(recipe);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Recipe> deleteRecipe(@PathVariable Long id) {
-        recipeService.deleteById(id);
+    public ResponseEntity<Void> deleteById(@PathVariable Long id) {
+        recipeService.deleteRecipe(id);
         return ResponseEntity.noContent().build();
     }
 
-    @PostMapping("edit/{id}")
-    public ResponseEntity<Recipe> editRecipe(@PathVariable Long id, @RequestBody Recipe recipe) {
-        recipeService.editRecipe(recipe);
-        return ResponseEntity.noContent().build();
-    }
 }

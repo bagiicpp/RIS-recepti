@@ -18,8 +18,10 @@ type recipeDashType = {
 const RecipeDash: React.FC<recipeDashType> = ({ setRecipes, recipes }) => {
   useEffect(() => {
     axios
-      .get('http://localhost:8080/api/recipe/all')
+      .get('http://localhost:8080/recipe/all')
       .then((res) => {
+        console.log(res.data);
+
         setRecipes(res.data);
       })
       .catch((err) => {

@@ -31,16 +31,22 @@ const AddRecipeForm: React.FC<AddRecipeFormType> = ({
   const [formData, setFormData] = useState<formDataType>({
     name: '',
     description: '',
-    category: 'Breakfast',
+    category: '',
   });
 
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
+        console.log(formData);
+
         toast.promise(
           axios
-            .post('http://localhost:8080/api/recipe/new', formData)
+            .post('http://localhost:8080/recipe/new', {
+              name: formData.name,
+              description: formData.description,
+              category: formData.category,
+            })
             .then((res) => {
               const newRecipe: RecipeType = res.data;
               setRecipes((prev) => [...prev, newRecipe]);
@@ -57,7 +63,7 @@ const AddRecipeForm: React.FC<AddRecipeFormType> = ({
           }
         );
       }}
-      className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-[#222222] rounded-lg py-10 p-14 z-10 add-recipe-form space-y-6 flex flex-col"
+      className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-blk-5 rounded-lg py-10 p-14 z-10 add-recipe-form space-y-6 flex flex-col"
     >
       <div onClick={() => setFormVisible(!formVisible)}>
         <XCircleIcon className="h-7 absolute top-1/12 right-1/12 hover:text-[#F5CB5C] cursor-pointer self-end" />
@@ -70,9 +76,12 @@ const AddRecipeForm: React.FC<AddRecipeFormType> = ({
         <select
           value={formData.category}
           onChange={(e) =>
-            setFormData((prev) => ({ ...prev, category: e.target.value }))
+            setFormData((prev) => ({
+              ...prev,
+              category: e.target.value,
+            }))
           }
-          className="w-full bg-[#2e2e2e] px-3 py-2 rounded"
+          className="w-full bg-blk-10 border border-border px-3 py-2 rounded"
         >
           <option value="Breakfast">Breakfast</option>
           <option value="Lunch">Lunch</option>
@@ -84,13 +93,13 @@ const AddRecipeForm: React.FC<AddRecipeFormType> = ({
       <div>
         <label className="block mb-2 font-medium">Recipe Name</label>
         <input
-          value={formData?.name}
+          value={formData.name}
           onChange={(e) =>
             setFormData((prev) => ({ ...prev, name: e.target.value }))
           }
           type="text"
           placeholder="Enter recipe name"
-          className="w-full px-3 py-2 rounded bg-[#2e2e2e] transition-all duration-200 ease-in-out focus:outline-none focus:ring-1 focus:ring-[#808080]"
+          className="w-full px-3 py-2 rounded bg-blk-10 border border-border transition-all duration-200 ease-in-out focus:outline-none focus:ring-1 focus:ring-[#808080]"
         />
       </div>
 
@@ -99,13 +108,13 @@ const AddRecipeForm: React.FC<AddRecipeFormType> = ({
           Description
         </label>
         <textarea
-          value={formData?.description}
+          value={formData.description}
           onChange={(e) =>
             setFormData((prev) => ({ ...prev, description: e.target.value }))
           }
           id="description"
           placeholder="Enter recipe description..."
-          className="w-full px-3 py-2 rounded bg-[#2e2e2e] transition-all duration-200 ease-in-out focus:outline-none focus:ring-1 focus:ring-[#808080]"
+          className="w-full px-3 py-2 rounded bg-blk-10 border border-border transition-all duration-200 ease-in-out focus:outline-none focus:ring-1 focus:ring-[#808080]"
         />
       </div>
 

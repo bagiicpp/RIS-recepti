@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import 'tailwindcss';
 
 body {
-  background-color: #2d2e2d;
-  font-family: 'Balsamiq Sans', sans-serif;
+  background-color: black;
+  font-family: 'Dosis', sans-serif;
   color: white;
 }
 
+@theme {
+  --color-blk-0: hsl(0 0% 0%);
+  --color-blk-5: hsl(0 0% 5%);
+  --color-blk-10: hsl(0 0% 10%);
+  --color-text-base: hsl(0 0% 95%);
+  --color-text-muted: hsl(0 0% 70%);
+  --color-border: hsl(0 0% 30%);
+}

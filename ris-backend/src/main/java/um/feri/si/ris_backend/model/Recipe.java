@@ -1,28 +1,24 @@
 package um.feri.si.ris_backend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
+import java.time.LocalDate;
+
 @Data
+@Table(name = "recipe")
+@Entity
 public class Recipe {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    String name;
-    String description;
-    String category;
-    String date_of_creation;
+    private String name;
+    private String description;
+    private LocalDate date_of_creation = LocalDate.now();
+    private String category;
 
     public Recipe() {}
-
-    public Recipe(String name, String description) {
-        this.name = name;
-        this.description = description;
-    }
 }

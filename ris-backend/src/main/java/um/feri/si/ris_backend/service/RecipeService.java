@@ -15,27 +15,24 @@ public class RecipeService {
         this.recipeRepository = recipeRepository;
     }
 
-    public Recipe addRecipe(Recipe recipe) {
-        if (recipe.getName() == null || recipe.getName().isEmpty()) {
-            throw new IllegalArgumentException("You must provide a name for the recipe");
-        }
-
-        if (recipe.getDescription() == null || recipe.getDescription().isEmpty()) {
-            throw new IllegalArgumentException("You must provide a description for the recipe");
-        }
-
-        return this.recipeRepository.save(recipe);
-    }
 
     public List<Recipe> getAllRecipes() {
         return recipeRepository.findAll();
     }
 
-    public void deleteById(Long id) {
-        this.recipeRepository.deleteById(id);
+    public Recipe getRecipeById(Long id) {
+        return recipeRepository.findById(id).orElseThrow(() -> new RuntimeException("Recipe with id " + id + " not found!"));
     }
 
-    public Recipe editRecipe(Recipe recipe) {
-        return this.recipeRepository.save(recipe);
+    public Recipe createRecipe(Recipe recipe) {
+        return recipeRepository.save(recipe);
+    }
+
+    public Recipe updateRecipe(Recipe recipe) {
+        return recipeRepository.save(recipe);
+    }
+
+    public void deleteRecipe(Long id) {
+        recipeRepository.deleteById(id);
     }
 }
