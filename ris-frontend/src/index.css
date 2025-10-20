@@ -2,7 +2,8 @@
 @import "tailwindcss";
 
 body {
-  background-color: rgb(249 250 251);
+  background-color: #2d2e2d;
   font-family: 'Balsamiq Sans', sans-serif;
+  color: white;
 }
 

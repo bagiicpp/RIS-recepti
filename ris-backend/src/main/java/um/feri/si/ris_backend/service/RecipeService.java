@@ -30,4 +30,12 @@ public class RecipeService {
     public List<Recipe> getAllRecipes() {
         return recipeRepository.findAll();
     }
+
+    public void deleteById(Long id) {
+        this.recipeRepository.deleteById(id);
+    }
+
+    public Recipe editRecipe(Recipe recipe) {
+        return this.recipeRepository.save(recipe);
+    }
 }

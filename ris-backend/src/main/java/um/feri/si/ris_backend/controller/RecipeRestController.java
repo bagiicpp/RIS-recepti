@@ -24,9 +24,20 @@ public class RecipeRestController {
         return ResponseEntity.ok(saved);
     }
 
-    @GetMapping("/recipes")
+    @GetMapping("/all")
     public List<Recipe> getAllRecipes() {
         return recipeService.getAllRecipes();
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Recipe> deleteRecipe(@PathVariable Long id) {
+        recipeService.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("edit/{id}")
+    public ResponseEntity<Recipe> editRecipe(@PathVariable Long id, @RequestBody Recipe recipe) {
+        recipeService.editRecipe(recipe);
+        return ResponseEntity.noContent().build();
+    }
 }

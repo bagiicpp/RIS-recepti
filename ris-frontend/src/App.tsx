@@ -1,12 +1,22 @@
-import Header from "./components/Header";
-import RecipeDash from "./components/RecipeDash";
+import { useState } from 'react';
+import Header from './components/Header';
+import RecipeDash from './components/RecipeDash';
+
+type RecipeType = {
+  id: number;
+  name: string;
+  description: string;
+  category: string;
+  date_of_creation: string;
+};
 
 function App() {
+  const [recipes, setRecipes] = useState<RecipeType[]>([]);
+
   return (
     <>
-      I love niggers
-      <Header />
-      <RecipeDash />
+      <Header setRecipes={setRecipes} />
+      <RecipeDash recipes={recipes} setRecipes={setRecipes} />
     </>
   );
 }

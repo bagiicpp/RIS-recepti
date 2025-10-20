@@ -16,6 +16,8 @@ public class Recipe {
 
     String name;
     String description;
+    String category;
+    String date_of_creation;
 
     public Recipe() {}
 
