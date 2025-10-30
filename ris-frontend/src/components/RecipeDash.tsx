@@ -11,8 +11,8 @@ type RecipeType = {
 };
 
 type recipeDashType = {
-  setRecipes: React.Dispatch<React.SetStateAction<RecipeType[]>>;
   recipes: RecipeType[];
+  setRecipes: React.Dispatch<React.SetStateAction<RecipeType[]>>;
 };
 
 const RecipeDash: React.FC<recipeDashType> = ({ setRecipes, recipes }) => {
@@ -20,8 +20,7 @@ const RecipeDash: React.FC<recipeDashType> = ({ setRecipes, recipes }) => {
     axios
       .get('http://localhost:8080/recipe/all')
       .then((res) => {
-        console.log(res.data);
-
+        setRecipes(res.data);
         setRecipes(res.data);
       })
       .catch((err) => {

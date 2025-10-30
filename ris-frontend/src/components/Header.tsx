@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import AddRecipeForm from './AddRecipeForm';
+import { PlusIcon } from '@heroicons/react/16/solid';
+import CategoryToggle from './CategoryToggle';
 
 gsap.registerPlugin(useGSAP);
 
@@ -36,21 +38,23 @@ const Header: React.FC<HeaderType> = ({ setRecipes }) => {
         <p className="text-2xl font-bold text-text-base hover:text-[#F5CB5C]">
           RecipeVwr
         </p>
-        <div>
-          <p
-            className="hover:text-[#F5CB5C] text-text-base text-xl cursor-pointer"
-            onClick={() => setFormVisible(!formVisible)}
-          >
+        <CategoryToggle setRecipes={setRecipes} />
+        <div
+          onClick={() => setFormVisible(!formVisible)}
+          className="flex items-center space-x-1 group hover:text-[#F5CB5C] cursor-pointer transition-all duration-100 ease-in"
+        >
+          <PlusIcon className="w-6 self-center" />
+          <p className="text-text-base text-xl group-hover:text-[#F5CB5C] transition-all duration-100 ease-in">
             New Recipe
           </p>
-          {formVisible && (
-            <AddRecipeForm
-              setFormVisible={setFormVisible}
-              formVisible={formVisible}
-              setRecipes={setRecipes}
-            />
-          )}
         </div>
+        {formVisible && (
+          <AddRecipeForm
+            setFormVisible={setFormVisible}
+            formVisible={formVisible}
+            setRecipes={setRecipes}
+          />
+        )}
       </div>
     </div>
   );

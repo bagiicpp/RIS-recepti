@@ -45,7 +45,6 @@ const EditRecipeForm: React.FC<FormDataType & EditRecipeFormType> = ({
       onSubmit={(e) => {
         e.preventDefault();
         console.log(formData);
-
         axios
           .post(`http://localhost:8080/recipe/edit`, {
             id: formData.id,
@@ -54,16 +53,9 @@ const EditRecipeForm: React.FC<FormDataType & EditRecipeFormType> = ({
             category: formData.category,
           })
           .then(() => {
-            setRecipes((prevRecipes) =>
-              prevRecipes.map((recipe) =>
-                recipe.id === formData.id
-                  ? {
-                      ...recipe,
-                      name: formData.name,
-                      description: formData.description,
-                      category: formData.category,
-                    }
-                  : recipe
+            setRecipes((prev) =>
+              prev.map((r) =>
+                r.id === formData.id ? { ...r, ...formData } : r
               )
             );
           })

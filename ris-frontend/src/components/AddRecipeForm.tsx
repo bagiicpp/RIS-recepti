@@ -31,7 +31,7 @@ const AddRecipeForm: React.FC<AddRecipeFormType> = ({
   const [formData, setFormData] = useState<formDataType>({
     name: '',
     description: '',
-    category: '',
+    category: 'Breakfast',
   });
 
   return (
