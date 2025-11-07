@@ -1,10 +1,18 @@
-# RecipeVWR
+<h1 align="center">🍳 RecipeVWR</h1>
+<p align="center">
+  Discover, organize, and share your favorite recipes with ease.
+</p>
 
-![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white)
-![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/-SpringBoot-6DB33F?logo=springboot&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white"/>
+  <img src="https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white"/>
+  <img src="https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/-Bun-000000?logo=bun&logoColor=white"/>
+  <img src="https://img.shields.io/badge/-SpringBoot-6DB33F?logo=springboot&logoColor=white"/>
+  <img src="https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql&logoColor=white"/>
+</p>
 
 ## 📝 Description
 
@@ -15,7 +23,8 @@ RecipeVWR is a modern web application built with React and TypeScript, designed 
 - React
 - TypeScript
 - SpringBoot
-
+- Docker
+- PostgreSQL
 
 ## 📦 Key Dependencies
 
@@ -105,8 +114,11 @@ tailwindcss: ^4.1.14
 
 ### Node.js/JavaScript Setup
 1. Install Node.js (v18+ recommended)
-2. Install dependencies: `npm install` or `yarn install`
-3. Start development server: (Check scripts in `package.json`, e.g., `npm run dev`)
+2. Install dependencies using your preferred package manager:
+   - With **npm**: `npm install`
+   - Or with **Bun** (recommended): `bun install`
+3. Start development server:
+   - `npm run dev` or `bun run dev`
 
 
 ## 👥 Contributing
