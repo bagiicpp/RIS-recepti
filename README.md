@@ -10,15 +10,11 @@
 
 RecipeVWR is a modern web application built with React and TypeScript, designed to help you discover, organize, and share your favorite recipes. While currently under development and focusing on robust testing, RecipeVWR aims to provide a seamless user experience with features for searching recipes, creating personal cookbooks, and contributing your own culinary creations to the community. Stay tuned for updates as we continue to build and refine RecipeVWR into the ultimate recipe management tool.
 
-## ✨ Features
-
-- 🧪 Testing
-
-
 ## 🛠️ Tech Stack
 
-- ⚛️ React
-- 📜 TypeScript
+- React
+- TypeScript
+- SpringBoot
 
 
 ## 📦 Key Dependencies
