@@ -81,8 +81,6 @@ RecipeVWR is a modern web application built with React and TypeScript, designed 
 - **Commit Messages**: Use Conventional Commits style: `feat:`, `fix:`, `docs:`.
 - **Code Reviews**: Ensure code is readable, tested, and follows project style guidelines.
 
-- - -
-
 ### **Framework / Tool Decisions**
 
 - **Bun over npm**: Bun is used as the package manager and runtime for faster installs and improved performance during development.
