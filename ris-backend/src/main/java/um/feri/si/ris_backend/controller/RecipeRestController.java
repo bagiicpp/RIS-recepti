@@ -23,7 +23,6 @@ public class RecipeRestController {
     @GetMapping("/all")
     public List<Recipe> findAll() {
         List<Recipe> recipes = recipeService.getAllRecipes();
-        recipes.forEach(System.out::println);
         return recipes;
     }
 
@@ -46,6 +45,11 @@ public class RecipeRestController {
     public ResponseEntity<Void> deleteById(@PathVariable Long id) {
         recipeService.deleteRecipe(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/category/{category}")
+    public List<Recipe> getRecipesByCategory(@PathVariable String category) {
+        return recipeService.getByCategory(category);
     }
 
 }

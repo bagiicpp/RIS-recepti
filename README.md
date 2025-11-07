@@ -1,0 +1,126 @@
+# RecipeVWR
+
+![React](https://img.shields.io/badge/-React-blue?logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/-TypeScript-blue?logo=typescript&logoColor=white)
+
+## 📝 Description
+
+RecipeVWR is a modern web application built with React and TypeScript, designed to help you discover, organize, and share your favorite recipes. While currently under development and focusing on robust testing, RecipeVWR aims to provide a seamless user experience with features for searching recipes, creating personal cookbooks, and contributing your own culinary creations to the community. Stay tuned for updates as we continue to build and refine RecipeVWR into the ultimate recipe management tool.
+
+## ✨ Features
+
+- 🧪 Testing
+
+
+## 🛠️ Tech Stack
+
+- ⚛️ React
+- 📜 TypeScript
+
+
+## 📦 Key Dependencies
+
+```
+@gsap/react: ^2.1.2
+@heroicons/react: ^2.2.0
+@tailwindcss/vite: ^4.1.14
+axios: ^1.12.2
+gsap: ^3.13.0
+react: ^19.1.1
+react-dom: ^19.1.1
+sonner: ^2.0.7
+tailwindcss: ^4.1.14
+```
+
+## 🚀 Run Commands
+
+- **dev**: `npm run dev`
+- **build**: `npm run build`
+- **lint**: `npm run lint`
+- **preview**: `npm run preview`
+
+
+## 📁 Project Structure
+
+```
+.
+├── ris-backend
+│   ├── .mvn
+│   │   └── wrapper
+│   │       └── maven-wrapper.properties
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   └── src
+│       ├── main
+│       │   ├── java
+│       │   │   └── um
+│       │   │       └── feri
+│       │   │           └── si
+│       │   │               └── ris_backend
+│       │   │                   ├── RisBackendApplication.java
+│       │   │                   ├── controller
+│       │   │                   │   └── RecipeRestController.java
+│       │   │                   ├── model
+│       │   │                   │   └── Recipe.java
+│       │   │                   ├── repository
+│       │   │                   │   └── RecipeRepository.java
+│       │   │                   └── service
+│       │   │                       └── RecipeService.java
+│       │   └── resources
+│       │       └── application.properties
+│       └── test
+│           └── java
+│               └── um
+│                   └── feri
+│                       └── si
+│                           └── ris_backend
+│                               └── RisBackendApplicationTests.java
+└── ris-frontend
+    ├── bun.lock
+    ├── eslint.config.js
+    ├── index.html
+    ├── package.json
+    ├── public
+    │   └── vite.svg
+    ├── src
+    │   ├── App.tsx
+    │   ├── assets
+    │   │   └── react.svg
+    │   ├── components
+    │   │   ├── AddRecipeForm.tsx
+    │   │   ├── CategoryToggle.tsx
+    │   │   ├── EditRecipeForm.tsx
+    │   │   ├── Header.tsx
+    │   │   ├── RecipeCard.tsx
+    │   │   └── RecipeDash.tsx
+    │   ├── index.css
+    │   └── main.tsx
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    └── vite.config.ts
+```
+
+## 🛠️ Development Setup
+
+### Node.js/JavaScript Setup
+1. Install Node.js (v18+ recommended)
+2. Install dependencies: `npm install` or `yarn install`
+3. Start development server: (Check scripts in `package.json`, e.g., `npm run dev`)
+
+
+## 👥 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. **Fork** the repository
+2. **Clone** your fork: `git clone https://github.com/bagiicpp/RecipeVWR.git`
+3. **Create** a new branch: `git checkout -b feature/your-feature`
+4. **Commit** your changes: `git commit -am 'Add some feature'`
+5. **Push** to your branch: `git push origin feature/your-feature`
+6. **Open** a pull request
+
+Please ensure your code follows the project's style guidelines and includes tests where applicable.
+
+---
+*This README was generated with ❤️ by ReadmeBuddy*

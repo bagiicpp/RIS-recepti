@@ -15,6 +15,9 @@ public class RecipeService {
         this.recipeRepository = recipeRepository;
     }
 
+    public List<Recipe> getByCategory(String category) {
+        return recipeRepository.getRecipesByCategory(category);
+    }
 
     public List<Recipe> getAllRecipes() {
         return recipeRepository.findAll();
