@@ -58,6 +58,36 @@ RecipeVWR is a modern web application built with React and TypeScript, designed 
 | Docker Compose | 3.9     | Orchestrate multi-container apps |
 | Git            | Latest  | Version control                  |
 
+## 🖋️ Coding Standards & Framework Decisions
+
+### **Coding Standards**
+
+**Frontend**
+
+- **React Components**: Use `PascalCase` for component names, `camelCase` for props and state.
+- **TypeScript**: Strict mode enabled; always type props and function returns.
+- **Tailwind CSS**: Follow consistent utility ordering and BEM-style naming for custom classes.
+- **Linting & Formatting**: Run `eslint --fix` and `prettier` before committing.
+
+**Backend**
+
+- **Java Naming Conventions**: `PascalCase` for classes, `camelCase` for methods and variables.
+- **Spring Boot Structure**: Controllers handle HTTP requests; services handle business logic; repositories handle database access.
+- **Annotations**: Use consistently (`@RestController`, `@Service`, `@Repository`).
+- **Tests & Build**: Run `mvn clean install` to verify code compiles and tests pass.
+
+**General**
+
+- **Commit Messages**: Use Conventional Commits style: `feat:`, `fix:`, `docs:`.
+- **Code Reviews**: Ensure code is readable, tested, and follows project style guidelines.
+
+### **Framework / Tool Decisions**
+
+- **Bun over npm**: Bun is used as the package manager and runtime for faster installs and improved performance during development.
+- **Tailwind CSS**: Chosen for utility-first styling that allows rapid UI development while keeping CSS maintainable and consistent.
+- **Vite**: Lightweight, fast build tool that provides hot module replacement and optimized builds for the frontend.
+- **Spring Boot**: Provides a robust backend framework with integrated support for REST APIs, JPA, and dependency management via Maven.
+
 ## 📦 Key Dependencies
 
 ```
