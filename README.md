@@ -4,14 +4,17 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-Bun-000000?logo=bun&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-SpringBoot-6DB33F?logo=springboot&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql&logoColor=white"/>
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white" alt="React"/></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript"/></a>
+  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/></a>
+  <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white" alt="Vite"/></a>
+  <a href="https://bun.sh/"><img src="https://img.shields.io/badge/-Bun-000000?logo=bun&logoColor=white" alt="Bun"/></a>
+  <a href="https://spring.io/projects/spring-boot"><img src="https://img.shields.io/badge/-SpringBoot-6DB33F?logo=springboot&logoColor=white" alt="Spring Boot"/></a>
+  <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white" alt="Docker"/></a>
+  <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL"/></a>
+  <a href="https://www.java.com/"><img src="https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white" alt="Java"/></a>
+  <a href="https://maven.apache.org/"><img src="https://img.shields.io/badge/-Maven-C71A36?logo=apachemaven&logoColor=white" alt="Maven"/></a>
+  <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white" alt="Git"/></a>
 </p>
 
 ## 📝 Description
@@ -21,35 +24,39 @@ RecipeVWR is a modern web application built with React and TypeScript, designed 
 ## 🛠️ Tech Stack
 
 ### **Frontend**
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| [![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)](https://react.dev/) | 19.1.1 | UI library |
-| [![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/) | 5.x | Strongly typed JS |
-| [![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/) | 4.1.14 | Utility-first CSS |
-| [![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/) | 4.x | Frontend build tool & dev server |
-| [![Bun](https://img.shields.io/badge/-Bun-000000?logo=bun&logoColor=white)](https://bun.sh/) | Latest | Package manager & runtime |
+
+| Technology   | Version | Purpose                          |
+| ------------ | ------- | -------------------------------- |
+| React        | 19.1.1  | UI library                       |
+| TypeScript   | 5.x     | Strongly typed JS                |
+| Tailwind CSS | 4.1.14  | Utility-first CSS                |
+| Vite         | 4.x     | Frontend build tool & dev server |
+| Bun          | Latest  | Package manager & runtime        |
 
 ### **Backend**
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| [![Spring Boot](https://img.shields.io/badge/-SpringBoot-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) | 3.5.6 | REST API framework |
-| Java | 17 | Backend language |
-| Spring Data JPA | 3.x | Database access |
-| Maven | 3.x | Dependency management & build |
-| Lombok | 1.18.x | Reduce boilerplate code |
-| [![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/) | Latest | Containerization & deployment |
+
+| Technology      | Version | Purpose                       |
+| --------------- | ------- | ----------------------------- |
+| Spring Boot     | 3.5.6   | REST API framework            |
+| Java            | 17      | Backend language              |
+| Spring Data JPA | 3.x     | Database access               |
+| Maven           | 3.x     | Dependency management & build |
+| Lombok          | 1.18.x  | Reduce boilerplate code       |
+| Docker          | Latest  | Containerization & deployment |
 
 ### **Database**
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| [![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/) | 15.x | Relational database |
-| Port | 5432 | Database connection |
+
+| Technology | Version | Purpose             |
+| ---------- | ------- | ------------------- |
+| PostgreSQL | 15.x    | Relational database |
+| Port       | 5432    | Database connection |
 
 ### **Development Tools**
-| Tool | Version | Purpose |
-|------|---------|---------|
-| Docker Compose | 3.9 | Orchestrate multi-container apps |
-| Git | Latest | Version control |
+
+| Tool           | Version | Purpose                          |
+| -------------- | ------- | -------------------------------- |
+| Docker Compose | 3.9     | Orchestrate multi-container apps |
+| Git            | Latest  | Version control                  |
 
 ## 📦 Key Dependencies
 
@@ -71,7 +78,6 @@ tailwindcss: ^4.1.14
 - **build**: `npm run build`
 - **lint**: `npm run lint`
 - **preview**: `npm run preview`
-
 
 ## 📁 Project Structure
 
@@ -138,13 +144,13 @@ tailwindcss: ^4.1.14
 ## 🛠️ Development Setup
 
 ### Node.js/JavaScript Setup
+
 1. Install Node.js (v18+ recommended)
 2. Install dependencies using your preferred package manager:
    - With **npm**: `npm install`
    - Or with **Bun** (recommended): `bun install`
 3. Start development server:
    - `npm run dev` or `bun run dev`
-
 
 ## 👥 Contributing
 
