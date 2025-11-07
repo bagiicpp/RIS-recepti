@@ -1,4 +1,4 @@
-<h1 align="center">🍳 RecipeVWR</h1>
+<h1 align="center">RecipeVWR</h1>
 <p align="center">
   Discover, organize, and share your favorite recipes with ease.
 </p>
@@ -20,11 +20,36 @@ RecipeVWR is a modern web application built with React and TypeScript, designed 
 
 ## 🛠️ Tech Stack
 
-- React
-- TypeScript
-- SpringBoot
-- Docker
-- PostgreSQL
+### **Frontend**
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| [![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)](https://react.dev/) | 19.1.1 | UI library |
+| [![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/) | 5.x | Strongly typed JS |
+| [![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/) | 4.1.14 | Utility-first CSS |
+| [![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/) | 4.x | Frontend build tool & dev server |
+| [![Bun](https://img.shields.io/badge/-Bun-000000?logo=bun&logoColor=white)](https://bun.sh/) | Latest | Package manager & runtime |
+
+### **Backend**
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| [![Spring Boot](https://img.shields.io/badge/-SpringBoot-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) | 3.5.6 | REST API framework |
+| Java | 17 | Backend language |
+| Spring Data JPA | 3.x | Database access |
+| Maven | 3.x | Dependency management & build |
+| Lombok | 1.18.x | Reduce boilerplate code |
+| [![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/) | Latest | Containerization & deployment |
+
+### **Database**
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| [![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/) | 15.x | Relational database |
+| Port | 5432 | Database connection |
+
+### **Development Tools**
+| Tool | Version | Purpose |
+|------|---------|---------|
+| Docker Compose | 3.9 | Orchestrate multi-container apps |
+| Git | Latest | Version control |
 
 ## 📦 Key Dependencies
 
