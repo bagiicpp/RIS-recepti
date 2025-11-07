@@ -1,6 +1,10 @@
 # RecipeVWR
 
-![React](https://img.shields.io/badge/-React-blue?logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/-TypeScript-blue?logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/-SpringBoot-6DB33F?logo=springboot&logoColor=white)
 
 ## 📝 Description
 
@@ -121,6 +125,3 @@ Contributions are welcome! Here's how you can help:
 6. **Open** a pull request
 
 Please ensure your code follows the project's style guidelines and includes tests where applicable.
-
----
-*This README was generated with ❤️ by ReadmeBuddy*
