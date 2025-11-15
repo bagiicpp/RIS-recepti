@@ -21,6 +21,10 @@
 
 RecipeVWR is a modern web application built with React and TypeScript, designed to help you discover, organize, and share your favorite recipes. While currently under development and focusing on robust testing, RecipeVWR aims to provide a seamless user experience with features for searching recipes, creating personal cookbooks, and contributing your own culinary creations to the community. Stay tuned for updates as we continue to build and refine RecipeVWR into the ultimate recipe management tool.
 
+## Vision
+
+Our application allows users to add their own recipes, browse existing ones, and easily search through different categories. With a simple design, the app quickly helps users find ideas for preparing meals. The purpose of the application is to simplify searching, enable knowledge sharing, and create a pleasant space for exchanging recipes.
+
 ## 🛠️ Tech Stack
 
 ### **Frontend**
@@ -170,6 +174,28 @@ tailwindcss: ^4.1.14
     ├── tsconfig.node.json
     └── vite.config.ts
 ```
+
+## Dictionary
+
+| Term                  | Description                                                                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **Recipe**            | A collection of ingredients, instructions, title, type of dish, and image.                                                           |
+| **Ingredients**       | A list of elements with appropriate units for preparing the recipe.                                                                  |
+| **Instructions**      | Steps required to prepare the recipe.                                                                                                |
+| **Units**             | Measurement units used in recipes, e.g., ml (milliliters), tbsp (tablespoon), g (grams).                                             |
+| **Dish Types**        | Category of the dish, e.g., baked dishes, main courses, or desserts. Recipes can be categorized by type.                             |
+| **Login**             | Process where registered users enter their email and password to gain access to the application's functions.                         |
+| **Registered User**   | A person who has successfully completed the registration process.                                                                    |
+| **Unregistered User** | A person who can view recipes but cannot add, delete, or edit recipes, nor use other application functions.                          |
+| **Adding**            | Registered users can add a recipe by entering the title, ingredients, instructions, selecting the dish type, and uploading an image. |
+| **Editing**           | Registered users can edit their existing recipes by changing the title, ingredients, or instructions.                                |
+| **Sorting**           | Process that allows recipes to be sorted alphabetically or by dish type.                                                             |
+| **Favorite Recipes**  | A list of recipes that the registered user has marked as favorites and can easily find and use.                                      |
+| **Application Usage** | Actions available in the application, including browsing, adding, deleting, and editing recipes.                                     |
+
+## DPU
+
+![My Diagram](DPU.png)
 
 ## 🛠️ Development Setup
 
