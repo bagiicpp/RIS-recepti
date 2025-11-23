@@ -1,4 +1,4 @@
-# RecipeVWR
+<h1 align="center">RecipeVWR</h1>
 <p align="center">
   Odkrij, organiziraj in deli svoje najljubše recepte z lahkoto.
 </p>
@@ -92,6 +92,7 @@ Aplikacija uporabnikom omogoča dodajanje receptov, brskanje po obstoječih ter 
 
 ## 📦 Ključne odvisnosti
 
+```
 @gsap/react: ^2.1.2
 @heroicons/react: ^2.2.0
 @tailwindcss/vite: ^4.1.14
@@ -101,7 +102,7 @@ react: ^19.1.1
 react-dom: ^19.1.1
 sonner: ^2.0.7
 tailwindcss: ^4.1.14
-
+```
 
 ## 🚀 Ukazi za zagon
 
@@ -112,7 +113,64 @@ tailwindcss: ^4.1.14
 
 ## 📁 Struktura projekta
 
-(Struktura datotek ostane enaka kot v izvirniku.)
+.
+├── ris-backend
+│   ├── .mvn
+│   │   └── wrapper
+│   │       └── maven-wrapper.properties
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   └── src
+│       ├── main
+│       │   ├── java
+│       │   │   └── um
+│       │   │       └── feri
+│       │   │           └── si
+│       │   │               └── ris_backend
+│       │   │                   ├── RisBackendApplication.java
+│       │   │                   ├── controller
+│       │   │                   │   └── RecipeRestController.java
+│       │   │                   ├── model
+│       │   │                   │   └── Recipe.java
+│       │   │                   ├── repository
+│       │   │                   │   └── RecipeRepository.java
+│       │   │                   └── service
+│       │   │                       └── RecipeService.java
+│       │   └── resources
+│       │       └── application.properties
+│       └── test
+│           └── java
+│               └── um
+│                   └── feri
+│                       └── si
+│                           └── ris_backend
+│                               └── RisBackendApplicationTests.java
+│
+└── ris-frontend
+    ├── bun.lock
+    ├── eslint.config.js
+    ├── index.html
+    ├── package.json
+    ├── public
+    │   └── vite.svg
+    ├── src
+    │   ├── App.tsx
+    │   ├── assets
+    │   │   └── react.svg
+    │   ├── components
+    │   │   ├── AddRecipeForm.tsx
+    │   │   ├── CategoryToggle.tsx
+    │   │   ├── EditRecipeForm.tsx
+    │   │   ├── Header.tsx
+    │   │   ├── RecipeCard.tsx
+    │   │   └── RecipeDash.tsx
+    │   ├── index.css
+    │   └── main.tsx
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    └── vite.config.ts
 
 ## Slovar pojmov
 
@@ -134,7 +192,7 @@ tailwindcss: ^4.1.14
 
 ## DPU
 
-*(Diagram ostane nespremenjen)*
+![My Diagram](DPU.png)
 
 ## 🛠️ Razvojno okolje
 
