@@ -113,64 +113,182 @@ tailwindcss: ^4.1.14
 
 ## 📁 Struktura projekta
 
+```
+
+
+
 .
+
+
 ├── ris-backend
-│ ├── .mvn
-│ │ └── wrapper
-│ │ └── maven-wrapper.properties
-│ ├── mvnw
-│ ├── mvnw.cmd
-│ ├── pom.xml
-│ └── src
-│ ├── main
-│ │ ├── java
-│ │ │ └── um
-│ │ │ └── feri
-│ │ │ └── si
-│ │ │ └── ris_backend
-│ │ │ ├── RisBackendApplication.java
-│ │ │ ├── controller
-│ │ │ │ └── RecipeRestController.java
-│ │ │ ├── model
-│ │ │ │ └── Recipe.java
-│ │ │ ├── repository
-│ │ │ │ └── RecipeRepository.java
-│ │ │ └── service
-│ │ │ └── RecipeService.java
-│ │ └── resources
-│ │ └── application.properties
-│ └── test
-│ └── java
-│ └── um
-│ └── feri
-│ └── si
-│ └── ris_backend
-│ └── RisBackendApplicationTests.java
-│
+
+
+│   ├── .mvn
+
+
+│   │   └── wrapper
+
+
+│   │       └── maven-wrapper.properties
+
+
+│   ├── mvnw
+
+
+│   ├── mvnw.cmd
+
+
+│   ├── pom.xml
+
+
+│   └── src
+
+
+│       ├── main
+
+
+│       │   ├── java
+
+
+│       │   │   └── um
+
+
+│       │   │       └── feri
+
+
+│       │   │           └── si
+
+
+│       │   │               └── ris_backend
+
+
+│       │   │                   ├── RisBackendApplication.java
+
+
+│       │   │                   ├── controller
+
+
+│       │   │                   │   └── RecipeRestController.java
+
+
+│       │   │                   ├── model
+
+
+│       │   │                   │   └── Recipe.java
+
+
+│       │   │                   ├── repository
+
+
+│       │   │                   │   └── RecipeRepository.java
+
+
+│       │   │                   └── service
+
+
+│       │   │                       └── RecipeService.java
+
+
+│       │   └── resources
+
+
+│       │       └── application.properties
+
+
+│       └── test
+
+
+│           └── java
+
+
+│               └── um
+
+
+│                   └── feri
+
+
+│                       └── si
+
+
+│                           └── ris_backend
+
+
+│                               └── RisBackendApplicationTests.java
+
+
 └── ris-frontend
-├── bun.lock
-├── eslint.config.js
-├── index.html
-├── package.json
-├── public
-│ └── vite.svg
-├── src
-│ ├── App.tsx
-│ ├── assets
-│ │ └── react.svg
-│ ├── components
-│ │ ├── AddRecipeForm.tsx
-│ │ ├── CategoryToggle.tsx
-│ │ ├── EditRecipeForm.tsx
-│ │ ├── Header.tsx
-│ │ ├── RecipeCard.tsx
-│ │ └── RecipeDash.tsx
-│ ├── index.css
-│ └── main.tsx
-├── tsconfig.app.json
-├── tsconfig.json
-├── tsconfig.node.json
-└── vite.config.ts
+
+
+    ├── bun.lock
+
+
+    ├── eslint.config.js
+
+
+    ├── index.html
+
+
+    ├── package.json
+
+
+    ├── public
+
+
+    │   └── vite.svg
+
+
+    ├── src
+
+
+    │   ├── App.tsx
+
+
+    │   ├── assets
+
+
+    │   │   └── react.svg
+
+
+    │   ├── components
+
+
+    │   │   ├── AddRecipeForm.tsx
+
+
+    │   │   ├── CategoryToggle.tsx
+
+
+    │   │   ├── EditRecipeForm.tsx
+
+
+    │   │   ├── Header.tsx
+
+
+    │   │   ├── RecipeCard.tsx
+
+
+    │   │   └── RecipeDash.tsx
+
+
+    │   ├── index.css
+
+
+    │   └── main.tsx
+
+
+    ├── tsconfig.app.json
+
+
+    ├── tsconfig.json
+
+
+    ├── tsconfig.node.json
+
+
+    └── vite.config.ts
+
+
+```
 
 ## Slovar pojmov
 
