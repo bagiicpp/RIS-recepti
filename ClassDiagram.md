@@ -1,1 +1,1 @@
-![ClassDiagram]('ClassDiagram.png')
+![My Diagram](ClassDiagram.png)
